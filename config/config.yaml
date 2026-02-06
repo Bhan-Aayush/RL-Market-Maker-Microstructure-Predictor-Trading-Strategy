@@ -1,0 +1,55 @@
+# Trading Platform Configuration
+
+# Risk Limits
+risk:
+  max_position: 100
+  max_daily_loss: 1000.0
+  max_order_rate: 100  # orders per second
+  max_order_size: 50
+  price_deviation_pct: 0.05  # 5% max deviation from mid
+
+# LOB Settings
+lob:
+  tick_size: 0.01
+  max_levels: 20
+
+# Market Data
+market_data:
+  update_frequency: 0.1  # seconds (10 Hz)
+  synthetic_volatility: 0.02
+
+# Strategy Defaults
+strategy:
+  default_half_spread: 0.05
+  default_quote_size: 1
+  quote_update_interval: 0.5  # seconds
+
+# RL Training
+rl:
+  episode_length: 1000
+  initial_mid: 100.0
+  use_predictor: false
+
+# Backtest
+backtest:
+  default_ticks: 1000
+  initial_price: 100.0
+  volatility: 0.02
+
+# IBM Consulting Advantage integration
+# Placeholders for IBM Consulting Advantage (watsonx) plugin configuration.
+# These values should be set via environment variables in production or
+# stored securely in a secrets manager. The two plugin IDs provided can be
+# kept here as defaults for local testing.
+ibm_consulting:
+  enabled: false  # set to true to enable calls to IBM Consulting Advantage
+  # The 'cline' and 'roo' entries below are plugin identifiers (provided)
+  # or API keys depending on your Advantage setup.
+  cline_plugin_id: "7:xxx:96ca8495-9263-4979-8c45-959b782f687e:93884a6f-5a12-41bf-bf80-add62f7cdf09:56018549-6321-4e2e-b574-28c3287571ff"
+  roo_plugin_id:   "7:xxx:96ca8495-9263-4979-8c45-959b782f687e:93884a6f-5a12-41bf-bf80-add62f7cdf09:a8a643b2-e285-49fa-bd97-f13592f734fd"
+  # Optional endpoint config if using a proxy or custom Advantage deployment
+  api_endpoint: "https://api.ibm-advantage.example.com"
+  # Auth: prefer reading from env vars `IBM_ADVANTAGE_KEY` and `IBM_ADVANTAGE_SECRET`
+  # or use an OAuth flow. Leave empty to require env-vars at runtime.
+  api_key: ""
+  api_secret: ""

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  trading-interface:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+    command: python scripts/run_interface.py

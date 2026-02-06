@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Models and data
+models/*.pkl
+models/*.pt
+models/*.h5
+data/*.csv
+data/*.parquet
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+.dockerignore
+
+# C++ build artifacts
+core/cpp/build/
+core/cpp/*.so
+core/cpp/*.dylib
+core/cpp/*.dll
+core/cpp/CMakeCache.txt
+core/cpp/CMakeFiles/
+
+# Rust build artifacts
+core/rust/target/
+core/rust/Cargo.lock
+
+# OCaml build artifacts
+core/ocaml/_build/
+core/ocaml/*.so
+core/ocaml/*.dylib
